@@ -1,0 +1,39 @@
+{
+  "login": "ലോഗിൻ",
+  "signup": "സൈൻ അപ്പ്",
+  "logout": "ലോഗ് ഔട്ട്",
+  "search_exams": "പരീക്ഷകൾ തിരയുക",
+  "apply_now": "ഇപ്പോൾ അപേക്ഷിക്കുക",
+  "save_exam": "പരീക്ഷ സേവ് ചെയ്യുക",
+  "dashboard": "ഡാഷ്‌ബോർഡ്",
+  "profile": "പ്രൊഫൈൽ",
+
+  "eligibility": "യോഗ്യത",
+  "category": "വിഭാഗം",
+  "exam_date": "പരീക്ഷാ തീയതി",
+  "last_date": "അവസാന തീയതി",
+  "application_fee": "അപേക്ഷാ ഫീസ്",
+  "official_link": "ഔദ്യോഗിക ലിങ്ക്",
+  "syllabus": "സിലബസ്",
+  "previous_papers": "മുൻവർഷങ്ങളിലെ ചോദ്യപേപ്പറുകൾ",
+
+  "suggest_missing_exam": "വിട്ടുപോയ പരീക്ഷ നിർദ്ദേശിക്കുക",
+  "my_suggestions": "എന്റെ നിർദ്ദേശങ്ങൾ",
+  "status": "നില",
+  "pending": "പെൻഡിംഗ് 🟡",
+  "approved": "അംഗീകരിച്ചു ✅",
+  "rejected": "നിരസിച്ചു ❌",
+
+  "analytics": "അനലിറ്റിക്സ്",
+  "exam_management": "പരീക്ഷാ മാനേജ്മെന്റ്",
+  "ai_exam_manager": "AI പരീക്ഷാ മാനേജർ",
+  "user_suggestions": "ഉപയോക്തൃ നിർദ്ദേശങ്ങൾ",
+  "settings": "ക്രമീകരണങ്ങൾ",
+
+  "welcome_message": "AI അസിസ്റ്റന്റിലേക്ക് സ്വാഗതം!",
+  "ask_anything": "പരീക്ഷകളെക്കുറിച്ച് എന്തും ചോദിക്കാം",
+  "quick_action_find": "എനിക്കായി പരീക്ഷകൾ കണ്ടെത്തുക",
+  "quick_action_deadlines": "വരാനിരിക്കുന്ന സമയപരിധികൾ",
+  "quick_action_engineering": "എഞ്ചിനീയറിംഗ് പരീക്ഷകൾ",
+  "quick_action_gov": "ബിരുദാനന്തര ബിരുദ പരീക്ഷകൾ"
+}

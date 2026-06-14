@@ -1,0 +1,39 @@
+{
+  "login": "లాగిన్",
+  "signup": "సైన్ అప్",
+  "logout": "లాగౌట్",
+  "search_exams": "పరీక్షలను వెతకండి",
+  "apply_now": "ఇప్పుడే దరఖాస్తు చేసుకోండి",
+  "save_exam": "పరీక్షను సేవ్ చేయండి",
+  "dashboard": "డాష్‌బోర్డ్",
+  "profile": "ప్రొఫైల్",
+
+  "eligibility": "అర్హత",
+  "category": "వర్గం",
+  "exam_date": "పరీక్ష తేదీ",
+  "last_date": "చివరి తేదీ",
+  "application_fee": "దరఖాస్తు రుసుము",
+  "official_link": "అధికారిక లింక్",
+  "syllabus": "సిలబస్",
+  "previous_papers": "గత సంవత్సరపు పేపర్లు",
+
+  "suggest_missing_exam": "లేని పరీక్షను సూచించండి",
+  "my_suggestions": "నా సూచనలు",
+  "status": "స్థితి",
+  "pending": "పెండింగ్ 🟡",
+  "approved": "ఆమోదించబడింది ✅",
+  "rejected": "తిరస్కరించబడింది ❌",
+
+  "analytics": "విశ్లేషణలు",
+  "exam_management": "పరీక్షల నిర్వహణ",
+  "ai_exam_manager": "AI పరీక్షల మేనేజర్",
+  "user_suggestions": "వినియోగదారుల సూచనలు",
+  "settings": "సెట్టింగులు",
+
+  "welcome_message": "AI అసిస్టెంట్‌కు స్వాగతం!",
+  "ask_anything": "పరీక్షల గురించి ఏదైనా అడగండి",
+  "quick_action_find": "నా కోసం పరీక్షలను వెతకండి",
+  "quick_action_deadlines": "రాబోయే గడువులు",
+  "quick_action_engineering": "ఇంజనీరింగ్ పరీక్షలు",
+  "quick_action_gov": "గ్రాడ్యుయేషన్ తర్వాత ప్రభుత్వ పరీక్షలు"
+}

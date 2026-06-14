@@ -1,0 +1,39 @@
+{
+  "login": "ಲಾಗಿನ್",
+  "signup": "ಸೈನ್ ಅಪ್",
+  "logout": "ಲಾಗ್ ಔಟ್",
+  "search_exams": "ಪರೀಕ್ಷೆಗಳನ್ನು ಹುಡುಕಿ",
+  "apply_now": "ಈಗಲೇ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ",
+  "save_exam": "ಪರೀಕ್ಷೆಯನ್ನು ಉಳಿಸಿ",
+  "dashboard": "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",
+  "profile": "ಪ್ರೊಫೈಲ್",
+
+  "eligibility": "ಅರ್ಹತೆ",
+  "category": "ವರ್ಗ",
+  "exam_date": "ಪರೀಕ್ಷೆಯ ದಿನಾಂಕ",
+  "last_date": "ಕೊನೆಯ ದಿನಾಂಕ",
+  "application_fee": "ಅರ್ಜಿ ಶುಲ್ಕ",
+  "official_link": "ಅಧಿಕೃತ ಲಿಂಕ್",
+  "syllabus": "ಪಠ್ಯಕ್ರಮ",
+  "previous_papers": "ಹಿಂದಿನ ವರ್ಷದ ಪ್ರಶ್ನೆ ಪತ್ರಿಕೆಗಳು",
+
+  "suggest_missing_exam": "ಇಲ್ಲದಿರುವ ಪರೀಕ್ಷೆಯನ್ನು ಸೂಚಿಸಿ",
+  "my_suggestions": "ನನ್ನ ಸೂಚನೆಗಳು",
+  "status": "ಸ್ಥಿತಿ",
+  "pending": "ಬಾಕಿ ಇದೆ 🟡",
+  "approved": "ಅನುಮೋದಿಸಲಾಗಿದೆ ✅",
+  "rejected": "ತಿರಸ್ಕರಿಸಲಾಗಿದೆ ❌",
+
+  "analytics": "ವಿಶ್ಲೇಷಣೆ",
+  "exam_management": "ಪರೀಕ್ಷಾ ನಿರ್ವಹಣೆ",
+  "ai_exam_manager": "ಎಐ ಪರೀಕ್ಷಾ ವ್ಯವಸ್ಥಾಪಕ",
+  "user_suggestions": "ಬಳಕೆದಾರರ ಸೂಚನೆಗಳು",
+  "settings": "ಸೆಟ್ಟಿಂಗ್ಗಳು",
+
+  "welcome_message": "ಎಐ ಸಹಾಯಕನಿಗೆ ಸ್ವಾಗತ!",
+  "ask_anything": "ಪರೀಕ್ಷೆಗಳ ಬಗ್ಗೆ ಏನನ್ನಾದರೂ ಕೇಳಿ",
+  "quick_action_find": "ನನಗಾಗಿ ಪರೀಕ್ಷೆಗಳನ್ನು ಹುಡುಕಿ",
+  "quick_action_deadlines": "ಮುಂಬರುವ ಕೊನೆಯ ದಿನಾಂಕಗಳು",
+  "quick_action_engineering": "ಎಂಜಿನಿಯರಿಂಗ್ ಪರೀಕ್ಷೆಗಳು",
+  "quick_action_gov": "ಪದವಿ ನಂತರದ ಸರ್ಕಾರಿ ಪರೀಕ್ಷೆಗಳು"
+}

@@ -1,0 +1,39 @@
+{
+  "login": "लॉगिन",
+  "signup": "साइन अप",
+  "logout": "लॉगआउट",
+  "search_exams": "परीक्षा खोजें",
+  "apply_now": "अभी आवेदन करें",
+  "save_exam": "परीक्षा सहेजें",
+  "dashboard": "डैशबोर्ड",
+  "profile": "प्रोफ़ाइल",
+
+  "eligibility": "योग्यता",
+  "category": "श्रेणी",
+  "exam_date": "परीक्षा तिथि",
+  "last_date": "अंतिम तिथि",
+  "application_fee": "आवेदन शुल्क",
+  "official_link": "आधिकारिक लिंक",
+  "syllabus": "पाठ्यक्रम",
+  "previous_papers": "पिछले वर्ष के पेपर",
+
+  "suggest_missing_exam": "लापता परीक्षा का सुझाव दें",
+  "my_suggestions": "मेरे सुझाव",
+  "status": "स्थिति",
+  "pending": "लंबित 🟡",
+  "approved": "स्वीकृत ✅",
+  "rejected": "अस्वीकृत ❌",
+
+  "analytics": "विश्लेषण",
+  "exam_management": "परीक्षा प्रबंधन",
+  "ai_exam_manager": "एआई परीक्षा प्रबंधक",
+  "user_suggestions": "उपयोगकर्ता सुझाव",
+  "settings": "सेटिंग्स",
+
+  "welcome_message": "एआई सहायक में आपका स्वागत है!",
+  "ask_anything": "परीक्षाओं के बारे में कुछ भी पूछें",
+  "quick_action_find": "मेरे लिए परीक्षा खोजें",
+  "quick_action_deadlines": "आगामी समय सीमा",
+  "quick_action_engineering": "इंजीनियरिंग परीक्षाएं",
+  "quick_action_gov": "स्नातक के बाद सरकारी परीक्षाएं"
+}

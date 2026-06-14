@@ -1,0 +1,13 @@
+.env
+.env.*
+node_modules/
+dist/
+__pycache__/
+*.pyc
+*.db
+*_backup.db
+.venv/
+venv/
+env/
+.idea/
+.vscode/

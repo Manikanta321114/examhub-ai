@@ -1,0 +1,39 @@
+{
+  "login": "உள்நுழை",
+  "signup": "பதிவு செய்",
+  "logout": "வெளியேறு",
+  "search_exams": "தேர்வுகளைத் தேடுக",
+  "apply_now": "இப்போது விண்ணப்பிக்கவும்",
+  "save_exam": "தேர்வைச் சேமிக்கவும்",
+  "dashboard": "டாஷ்போர்டு",
+  "profile": "சுயவிவரம்",
+
+  "eligibility": "தகுதி",
+  "category": "வகை",
+  "exam_date": "தேர்வு தேதி",
+  "last_date": "கடைசி தேதி",
+  "application_fee": "விண்ணப்பக் கட்டணம்",
+  "official_link": "அதிகாரப்பூர்வ இணைப்பு",
+  "syllabus": "பாடத்திட்டம்",
+  "previous_papers": "முந்தைய ஆண்டு தாள்கள்",
+
+  "suggest_missing_exam": "விடுபட்ட தேர்வை பரிந்துரைக்கவும்",
+  "my_suggestions": "எனது பரிந்துரைகள்",
+  "status": "நிலை",
+  "pending": "நிலுவையில் 🟡",
+  "approved": "அங்கீகரிக்கப்பட்டது ✅",
+  "rejected": "நிராகரிக்கப்பட்டது ❌",
+
+  "analytics": "பகுப்பாய்வு",
+  "exam_management": "தேர்வு மேலாண்மை",
+  "ai_exam_manager": "AI தேர்வு மேலாளர்",
+  "user_suggestions": "பயனர் பரிந்துரைகள்",
+  "settings": "அமைப்புகள்",
+
+  "welcome_message": "AI முகவருக்கு உங்களை வரவேற்கிறோம்!",
+  "ask_anything": "தேர்வுகள் பற்றி எதையும் கேளுங்கள்",
+  "quick_action_find": "எனக்கான தேர்வுகளைக் கண்டுபிடி",
+  "quick_action_deadlines": "வரவிருக்கும் காலக்கெடு",
+  "quick_action_engineering": "பொறியியல் தேர்வுகள்",
+  "quick_action_gov": "பட்டப்படிப்புக்கு பின் அரசு தேர்வுகள்"
+}

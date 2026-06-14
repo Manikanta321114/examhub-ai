@@ -1,0 +1,39 @@
+{
+  "login": "Login",
+  "signup": "Signup",
+  "logout": "Logout",
+  "search_exams": "Search Exams",
+  "apply_now": "Apply Now",
+  "save_exam": "Save Exam",
+  "dashboard": "Dashboard",
+  "profile": "Profile",
+
+  "eligibility": "Eligibility",
+  "category": "Category",
+  "exam_date": "Exam Date",
+  "last_date": "Last Date",
+  "application_fee": "Application Fee",
+  "official_link": "Official Link",
+  "syllabus": "Syllabus",
+  "previous_papers": "Previous Papers",
+
+  "suggest_missing_exam": "Suggest Missing Exam",
+  "my_suggestions": "My Suggestions",
+  "status": "Status",
+  "pending": "Pending 🟡",
+  "approved": "Approved ✅",
+  "rejected": "Rejected ❌",
+
+  "analytics": "Analytics",
+  "exam_management": "Exam Management",
+  "ai_exam_manager": "AI Exam Manager",
+  "user_suggestions": "User Suggestions",
+  "settings": "Settings",
+
+  "welcome_message": "Welcome to ExamHub AI Agent!",
+  "ask_anything": "Ask anything about exams",
+  "quick_action_find": "Find exams for me",
+  "quick_action_deadlines": "Upcoming deadlines",
+  "quick_action_engineering": "Engineering exams",
+  "quick_action_gov": "Government exams after graduation"
+}
