@@ -6,11 +6,24 @@ from sqlalchemy.orm import sessionmaker
 
 load_dotenv()
 
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./examhub.db")
+# Prevent empty string override issues
+raw_url = os.getenv("DATABASE_URL")
+if raw_url and raw_url.strip():
+    DATABASE_URL = raw_url.strip()
+else:
+    DATABASE_URL = "sqlite:///./examhub.db"
 
 # Support Render/Heroku standard database URL pattern
 if DATABASE_URL.startswith("postgres://"):
     DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
+
+# Safe logging (Never print password/credentials)
+if DATABASE_URL.startswith("sqlite"):
+    print("DATABASE_URL detected: SQLite database engine")
+elif "postgresql" in DATABASE_URL or "postgres" in DATABASE_URL:
+    print("DATABASE_URL detected: PostgreSQL database engine")
+else:
+    print("DATABASE_URL detected: Unknown database engine")
 
 is_sqlite = DATABASE_URL.startswith("sqlite")
 connect_args = {"check_same_thread": False} if is_sqlite else {}
