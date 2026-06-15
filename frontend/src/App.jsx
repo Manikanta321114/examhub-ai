@@ -14,7 +14,23 @@ const AIAssistant = React.lazy(() => import("./components/AIAssistant"));
 import { GraduationCap, Bot, AlertCircle, ExternalLink, Loader2, ArrowRight } from "lucide-react";
 
 function AppContent() {
-  const [activeTab, setActiveTab] = useState("home");
+  const getInitialTab = () => {
+    const path = window.location.pathname;
+    const pathMap = {
+      "/": "home",
+      "/exams": "exams",
+      "/login": "login",
+      "/signup": "signup",
+      "/dashboard": "dashboard",
+      "/admin": "admin_analytics",
+      "/admin/exams": "admin_exams_crud",
+      "/admin/ai": "admin_ai_manager",
+      "/admin/suggestions": "admin_suggestions",
+      "/admin/settings": "admin_settings"
+    };
+    return pathMap[path] || "home";
+  };
+  const [activeTab, setActiveTab] = useState(getInitialTab);
   const [isAiOpen, setIsAiOpen] = useState(false);
   const [aiNotificationCount, setAiNotificationCount] = useState(0);
   const { user, loading } = useAuth();
@@ -88,53 +104,53 @@ function AppContent() {
     setPendingExam(null);
   };
 
-  // Default landing views based on role changes
+  // Default landing views based on role changes and protected route guards
   useEffect(() => {
-    if (user?.is_admin) {
-      setActiveTab("admin_analytics");
-    } else {
-      if (activeTab.startsWith("admin_")) {
-        setActiveTab("home");
+    if (loading) return;
+
+    const path = window.location.pathname;
+    if (path.startsWith("/admin")) {
+      if (!user) {
+        setActiveTab("login");
+      } else if (!user.is_admin) {
+        setActiveTab("dashboard");
+      }
+    } else if (path === "/dashboard") {
+      if (!user) {
+        setActiveTab("login");
+      } else if (user.is_admin) {
+        setActiveTab("admin_analytics");
+      }
+    } else if (path === "/login" || path === "/signup") {
+      if (user) {
+        setActiveTab(user.is_admin ? "admin_analytics" : "dashboard");
       }
     }
-  }, [user]);
+  }, [loading, user]);
 
-  // URL pathname to activeTab synchronization on load & popstate
+  // Handle popstate (browser back/forward navigation)
   useEffect(() => {
-    const handleUrlChange = () => {
+    const handlePopState = () => {
       const path = window.location.pathname;
-      if (path === "/admin") {
-        if (user) {
-          if (user.is_admin) {
-            setActiveTab("admin_analytics");
-          } else {
-            setActiveTab("dashboard");
-          }
-        } else {
-          setActiveTab("login"); // Redirect to login for admin access
-        }
-      } else if (path === "/admin/login") {
-        setActiveTab("login");
-      } else if (path === "/login") {
-        setActiveTab("login");
-      } else if (path === "/signup") {
-        setActiveTab("signup");
-      } else if (path === "/dashboard") {
-        setActiveTab("dashboard");
-      } else if (path === "/exams") {
-        setActiveTab("exams");
-      } else if (path === "/") {
-        setActiveTab("home");
-      }
+      const pathMap = {
+        "/": "home",
+        "/exams": "exams",
+        "/login": "login",
+        "/signup": "signup",
+        "/dashboard": "dashboard",
+        "/admin": "admin_analytics",
+        "/admin/exams": "admin_exams_crud",
+        "/admin/ai": "admin_ai_manager",
+        "/admin/suggestions": "admin_suggestions",
+        "/admin/settings": "admin_settings"
+      };
+      const newTab = pathMap[path] || "home";
+      setActiveTab(newTab);
     };
 
-    if (!loading) {
-      handleUrlChange();
-    }
-
-    window.addEventListener("popstate", handleUrlChange);
-    return () => window.removeEventListener("popstate", handleUrlChange);
-  }, [loading, user]);
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
 
   // Synchronize URL pathname with activeTab changes
   useEffect(() => {
