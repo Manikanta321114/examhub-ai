@@ -137,35 +137,19 @@ async def lifespan(app: FastAPI):
             db.commit()
             print("Database seeded with sample exams successfully.")
         
-        # Seed Default Admin if no admin exists, using environment variables for safety
-        admin_email = os.getenv("ADMIN_EMAIL")
-        admin_password = os.getenv("ADMIN_PASSWORD")
-        if admin_email and admin_password:
-            if db.query(User).filter(User.is_admin == True).count() == 0:
-                admin_user = User(
-                    email=admin_email,
-                    full_name="ExamHub Admin",
-                    hashed_password=get_password_hash(admin_password),
-                    is_admin=True
-                )
-                db.add(admin_user)
-                db.commit()
-                print(f"Database seeded with Admin account: {admin_email}")
-        else:
-            env = os.getenv("ENVIRONMENT", "development")
-            if env.lower() != "production":
-                if db.query(User).filter(User.is_admin == True).count() == 0:
-                    admin_user = User(
-                        email="admin@examhub.com",
-                        full_name="ExamHub Admin",
-                        hashed_password=get_password_hash("admin123"),
-                        is_admin=True
-                    )
-                    db.add(admin_user)
-                    db.commit()
-                    print("Local Default admin created: admin@examhub.com / admin123 (Please change password)")
-            else:
-                print("Production environment detected. Missing ADMIN_EMAIL/ADMIN_PASSWORD environment variables. Seeding skipped.")
+        # Seed Default Admin if no admin exists, using environment variables with defaults for safety
+        admin_email = os.getenv("ADMIN_EMAIL") or "admin@examhub.com"
+        admin_password = os.getenv("ADMIN_PASSWORD") or "admin123"
+        if db.query(User).filter(User.is_admin == True).count() == 0:
+            admin_user = User(
+                email=admin_email,
+                full_name="ExamHub Admin",
+                hashed_password=get_password_hash(admin_password),
+                is_admin=True
+            )
+            db.add(admin_user)
+            db.commit()
+            print(f"Database seeded with Admin account: {admin_email}")
         
         # Seed default settings if missing
         from .models import SystemSetting
