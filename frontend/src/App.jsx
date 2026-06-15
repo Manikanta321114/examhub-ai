@@ -99,6 +99,66 @@ function AppContent() {
     }
   }, [user]);
 
+  // URL pathname to activeTab synchronization on load & popstate
+  useEffect(() => {
+    const handleUrlChange = () => {
+      const path = window.location.pathname;
+      if (path === "/admin") {
+        if (user) {
+          if (user.is_admin) {
+            setActiveTab("admin_analytics");
+          } else {
+            setActiveTab("dashboard");
+          }
+        } else {
+          setActiveTab("login"); // Redirect to login for admin access
+        }
+      } else if (path === "/admin/login") {
+        setActiveTab("login");
+      } else if (path === "/login") {
+        setActiveTab("login");
+      } else if (path === "/signup") {
+        setActiveTab("signup");
+      } else if (path === "/dashboard") {
+        setActiveTab("dashboard");
+      } else if (path === "/exams") {
+        setActiveTab("exams");
+      } else if (path === "/") {
+        setActiveTab("home");
+      }
+    };
+
+    if (!loading) {
+      handleUrlChange();
+    }
+
+    window.addEventListener("popstate", handleUrlChange);
+    return () => window.removeEventListener("popstate", handleUrlChange);
+  }, [loading, user]);
+
+  // Synchronize URL pathname with activeTab changes
+  useEffect(() => {
+    const pathMap = {
+      home: "/",
+      exams: "/exams",
+      login: "/login",
+      signup: "/signup",
+      dashboard: "/dashboard",
+      admin_analytics: "/admin",
+      admin_exams_crud: "/admin/exams",
+      admin_ai_manager: "/admin/ai",
+      admin_suggestions: "/admin/suggestions",
+      admin_settings: "/admin/settings",
+      admin: "/admin",
+      "admin/login": "/admin/login"
+    };
+
+    const targetPath = pathMap[activeTab];
+    if (targetPath && window.location.pathname !== targetPath) {
+      window.history.pushState(null, "", targetPath);
+    }
+  }, [activeTab]);
+
   const renderContent = () => {
     if (loading) {
       return (
@@ -134,7 +194,19 @@ function AppContent() {
       case "signup":
         return <Signup setActiveTab={setActiveTab} />;
       case "dashboard":
-        return user ? <Dashboard /> : <Login setActiveTab={setActiveTab} />;
+        return user ? (
+          user.is_admin ? <AdminPanel initialTab="analytics" /> : <Dashboard />
+        ) : (
+          <Login setActiveTab={setActiveTab} />
+        );
+      case "admin":
+        return user ? (
+          user.is_admin ? <AdminPanel initialTab="analytics" /> : <Dashboard />
+        ) : (
+          <Login setActiveTab={setActiveTab} />
+        );
+      case "admin/login":
+        return <Login setActiveTab={setActiveTab} />;
       case "admin_analytics":
         return user?.is_admin ? <AdminPanel initialTab="analytics" /> : <Home setActiveTab={setActiveTab} searchInput={searchInput} setSearchInput={setSearchInput} searchQuery={searchQuery} setSearchQuery={setSearchQuery} />;
       case "admin_exams_crud":
